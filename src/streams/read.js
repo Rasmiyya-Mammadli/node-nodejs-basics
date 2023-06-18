@@ -2,7 +2,7 @@ import { createReadStream } from 'fs';
 
 const read = async () => {
   try {
-    const stream = createReadStream('./files/fileToRead.txt', 'utf8');
+    const stream = createReadStream('./src/streams/files/fileToRead.txt', 'utf8');
     
     let data = ''
     stream.on('data', chunk => {

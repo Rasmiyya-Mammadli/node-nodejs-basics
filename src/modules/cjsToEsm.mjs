@@ -9,10 +9,10 @@ const random = Math.random();
 let unknownObject;
 
 if (random > 0.5) {
-  const jsonContent = fs.readFileSync('./files/a.json', 'utf8');
+  const jsonContent = fs.readFileSync('./src/modules/files/a.json', 'utf8');
   unknownObject = JSON.parse(jsonContent);
 } else {
-  const jsonContent = fs.readFileSync('./files/b.json', 'utf8');
+  const jsonContent = fs.readFileSync('./src/modules//files/b.json', 'utf8');
   unknownObject = JSON.parse(jsonContent);
 }
 

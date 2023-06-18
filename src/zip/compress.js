@@ -4,8 +4,8 @@ import { pipeline } from 'stream';
 
 const compress = async () => {
     // Write your code here
-    const input = createReadStream('./files/fileToCompress.txt', 'utf-8')
-    const output = createWriteStream('./files/archive.gz')
+    const input = createReadStream('./src/zip/files/fileToCompress.txt', 'utf-8')
+    const output = createWriteStream('./src/zip/files/archive.gz')
     const gzip = createGzip()
     pipeline(input, gzip, output, (err) => {
         if (err) {

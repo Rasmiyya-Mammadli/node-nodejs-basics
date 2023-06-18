@@ -3,8 +3,8 @@ import { createReadStream, createWriteStream } from 'fs';
 import { pipeline } from 'stream';
 const decompress = async () => {
     // Write your code here 
-    const input = createReadStream('./files/archive.gz')
-    const output = createWriteStream('./files/fileToCompress.txt')
+    const input = createReadStream('./src/zip/files/archive.gz')
+    const output = createWriteStream('./src/zip/files/fileToCompress.txt')
     const unzip = createGunzip()
     pipeline(input, unzip, output, (err) => {
         if (err) {
