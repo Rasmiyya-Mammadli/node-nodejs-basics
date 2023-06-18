@@ -2,7 +2,7 @@ import { createWriteStream } from 'fs';
 
 const write = async () => {
   try {
-    const stream = createWriteStream('./files/fileToWrite.txt', { flags: 'a' });
+    const stream = createWriteStream('./src/streams/files/fileToWrite.txt', { flags: 'a' });
 
     process.stdin.on('data', (chunk) => {
       stream.write(chunk);

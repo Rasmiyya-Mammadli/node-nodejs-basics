@@ -1,7 +1,7 @@
 import { promises as fsPromises, constants as fsConstants } from 'fs';
 
 const create = async () => {
-  const filePath = './files/fresh.txt';
+  const filePath = './src/fs/files/fresh.txt';
 
   try {
     await fsPromises.access(filePath, fsConstants.F_OK);
